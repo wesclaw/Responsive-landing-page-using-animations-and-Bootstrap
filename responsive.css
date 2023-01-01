@@ -1,0 +1,93 @@
+@media(max-width: 800px){
+  .navbar{
+    padding: 5px 0;
+  }
+
+  .header{
+    background-position: center;
+  }
+
+  .btns{
+    flex-direction: column;
+  }
+
+  button:nth-child(1){
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .box{
+    top: -250px;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  .box-two{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bar{
+  height: 1px;
+  width: 100%;
+  margin-bottom: 40px;
+  }
+
+  .top{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wrap{
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .pop-up{
+    padding-top: 850px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding-bottom: 300px;
+  }
+
+  .content{
+    max-width: 350px;
+  }
+
+  label{
+    height: 60px;
+  }
+
+  .pledge h6{
+    position: relative;
+    top: -35px;
+    left: 30px;
+    font-size: 12px;
+  }
+ 
+  .pledge h5{
+    position: relative;
+    top: -60px;
+    left: 150px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .pledge span{
+    color: grey;
+    font-size: 1rem;
+    font-weight: 200;
+    font-size: 12px;
+  }
+
+  .kinda-hard h5{
+    position: relative;
+    left: 180px;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+}

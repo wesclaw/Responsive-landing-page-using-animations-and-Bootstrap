@@ -1,0 +1,453 @@
+:root{
+  --main-white: rgb(248, 244, 244);
+  --cyan-main: rgb(72, 187, 187);
+  --light-grey: rgba(0, 0, 0, 0.13);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* /////moving the numbers fast */
+/* ////@property only works on some browsors  */
+
+/* ////1st number */
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.numbers h2 {
+  transition: --num 4s;
+  counter-set: num var(--num);
+  animation-name: move;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+h2::after {
+  content: counter(num);
+}
+
+@keyframes move {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 89896;
+  }
+}
+
+/* ///2nd number */
+@property --numtwo {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.numbers h3 {
+  transition: --numtwo 4s;
+  counter-set: num var(--numtwo);
+  animation-name: numtwo;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+h3::after {
+  content: counter(num);
+}
+
+@keyframes numtwo {
+  from {
+    --numtwo: 0;
+  }
+  to {
+    --numtwo: 5006;
+  }
+}
+
+/* ////third number  */
+@property --numthree {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.numbers h4 {
+  transition: --numtwo 4s;
+  counter-set: num var(--numthree);
+  animation-name: numthree;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+h4::after {
+  content: counter(num);
+}
+
+@keyframes numthree {
+  from {
+    --numthree: 0;
+  }
+  to {
+    --numthree: 56;
+  }
+}
+
+/* /////end of animation counter */
+
+
+
+
+.navbar{
+  padding: 30px 0;
+  
+}
+
+.header{
+  background-image: url(image-hero-desktop.jpg);
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+a{
+  color: ghostwhite !important;
+  margin-right: 30px;
+  font-size: 1.2rem;
+}
+
+.box-one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btns{
+  display: flex;
+  justify-content: space-between;
+}
+
+.m-logo{
+  position: relative;
+  top:-50px ;
+}
+
+.box{
+  background-color: var(--main-white);
+  position: relative;
+  top: -100px;
+  padding: 20px 60px 20px 60px;
+  border-radius: 10px;
+}
+
+.box h1{
+  margin-bottom: 15px;
+}
+
+.box p{
+  margin-bottom: 30px;
+  color: grey;
+}
+
+button:nth-child(1){
+  padding: 0px 50px;
+  border-radius: 50px;
+  border: none;
+  color: ghostwhite;
+  font-weight: bold;
+  background-color: var(--cyan-main);
+}
+
+button:nth-child(2){
+ padding: 0px 20px; 
+ border-radius: 50px;
+ border: none;
+ color: grey;
+ font-weight: bold;
+}
+
+.icon-logo{
+  position: relative;
+  right: 20px;
+}
+
+/* /////counnter */
+
+.counter{
+  margin-top: 20px;
+}
+
+.box-two{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  position: relative;
+}
+
+/* ///had to make max-width on the white card to fit with top mastercraft */
+
+.try-this{
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.box-two h2{
+  font-weight: bold;
+}
+
+.bar{
+  height: 70px;
+  width: 2px;
+  background-color: darkgrey;
+  opacity: 15%;
+} 
+
+/* ///progress bar */
+
+.progress{
+  width: 100px;
+  background-color: rgb(211, 205, 205);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.inside-bar{
+  position: relative;
+  width: 90px;
+  height: 100%;
+  background-color: var(--cyan-main);
+  animation-name: bar;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes bar{
+  from{width: 0%}
+  to{width: 79%}
+}
+
+
+/* /////about section */
+
+.about{
+  margin: 20px auto;
+  max-width: 795px;
+  
+}
+
+.about h5{
+  margin-bottom: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.wrap{
+  border: 2px solid var(--light-grey);
+  padding: 40px 30px 20px 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.top p{
+  color: var(--cyan-main);
+}
+
+.top h6{
+  font-weight: bold;
+  position: relative;
+  top: -12px;
+  font-size: 1.2rem;
+}
+
+.top .left{
+  font-size: 1.7rem;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  bottom: -10px;
+}
+
+.left span{
+  font-size: 1rem;
+  color: grey;
+  font-weight: 200;
+  margin-left: 5px;
+}
+
+.top button{
+  background-color: var(--cyan-main);
+  color: ghostwhite;
+  font-weight: bold;
+  padding: 10px 30px;
+  font-weight: 500;
+}
+
+.wrap:nth-of-type(3){
+  border: 2px solid rgba(211, 211, 211, 0.295);
+}
+
+
+/* /////modal */
+
+
+.pop-up{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.733);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  display: none;
+ 
+}
+
+.content{
+  max-width: 780px;
+  height: auto;
+  background-color: ghostwhite;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.project-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-top p{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.project-top h1{
+  font-size: 1.8rem;
+}
+
+.pledge{
+  display: flex;
+  position: relative;
+}
+
+.pledge p{
+  position: relative;
+  left: 30px;
+  bottom: 28px;
+  font-weight: bold;
+  color: var(--cyan-main);
+  cursor: pointer;
+}
+
+.pledge h6{
+  position: relative;
+  top: -65px;
+  left: 200px;
+}
+
+.pledge h5{
+  position: relative;
+  top: -95px;
+  left: 550px;
+  font-weight: bold;
+  
+}
+
+.pledge span{
+  color: grey;
+  font-size: 1rem;
+  font-weight: 200;
+  margin-left: 5px;
+}
+
+.radio{
+  width: 20px;
+  height: 20px;
+  accent-color: darkcyan;
+  cursor: pointer;
+}
+
+.pledge-card{
+  border: 2px solid var(--light-grey);
+  padding: 30px 30px 10px 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  
+}
+
+label{
+  height: 30px;
+}
+
+.kinda-hard h5{
+  color: rgba(128, 128, 128, 0.438);
+}
+
+.kinda-hard p{
+  color: rgba(128, 128, 128, 0.438);
+}
+
+.kinda-hard h6{
+  color: rgba(128, 128, 128, 0.438);
+}
+
+.pledge-card:nth-of-type(5){
+  color: rgba(128, 128, 128, 0.432);
+  border: 2px solid rgba(128, 128, 128, 0.171);
+}
+
+
+/* ///btn pledge */
+.pledge-btn{
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+  border: none;
+  padding: 10px 40px;
+  color: ghostwhite;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: var(--cyan-main);
+  display: none; 
+}
+
+.about button:hover{
+  background-color: rgb(11, 59, 59);
+}
+
+.mastercraft button:hover{
+  background-color:rgb(11, 59, 59);
+}
+
+
+
+.pledge-btn:hover{
+  background-color: rgb(11, 59, 59);;
+}
